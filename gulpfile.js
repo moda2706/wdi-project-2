@@ -17,7 +17,7 @@ gulp.task('js', () => {
 
 gulp.task('sass', () => {
   return gulp.src('src/scss/**/*.scss')
-    .pipe(plumber())
+    .pipe(plumber())// restarts gulp with out refreshing gulp on terminal
     .pipe(sass().on('error', sass.logError))
     .pipe(cleanCSS({ compatibility: 'ie8' }))
     .pipe(gulp.dest('public/css'));
