@@ -4,7 +4,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
   <title>WDI Project 2</title>
-  <link rel="stylesheet" href="/css/main.css">
+
+  <% include ./partials/stylesheet %>
   <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -12,8 +13,15 @@
   <script src="/js/client.js" charset="utf-8"></script>
 </head>
 <body>
-  <main>
-    <%- body %>
-  </main>
+  <main class="container">
+  <% for (const type in messages) { %>
+    <p class="alert alert-<%= type %>"><%= messages[type] %></p>
+  <% } %>
+
+  <%- body %>
+</main>
+  <footer>
+    <p>MAde with &hearts; by MO</p>
+  </footer>
 </body>
 </html>
