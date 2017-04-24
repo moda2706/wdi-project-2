@@ -23,6 +23,9 @@ router.route('/artists')
   .get(artists.index)
   .post(secureRoute, artists.create);
 
+router.route('/artists/api')
+  .get(artists.api);
+
 router.route('/artists/new')
   .get(secureRoute, artists.new);
 

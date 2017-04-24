@@ -65,6 +65,13 @@ function artistsDelete(req,res, next) {
   .catch(next);
 }
 
+function artistsAPI(req, res) {
+  Artist.find({}, (err, artists) => {
+    if (err) return res.status(500).send();
+    return res.status(200).json({ artists: artists });
+  });
+}
+
 module.exports = {
   index: artistsIndex,
   new: artistsNew,
@@ -72,5 +79,6 @@ module.exports = {
   show: artistsShow,
   edit: artistsEdit,
   update: artistsUpdate,
-  delete: artistsDelete
+  delete: artistsDelete,
+  api: artistsAPI
 };
