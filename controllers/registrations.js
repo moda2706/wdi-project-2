@@ -1,4 +1,4 @@
-const User = require('../models/users');
+const User = require('../models/user');
 
 function registrationsNew(req, res) {
   return res.render('registrations/new');

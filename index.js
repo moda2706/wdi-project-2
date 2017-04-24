@@ -2,6 +2,7 @@ const express         = require('express');
 const expressLayouts  = require('express-ejs-layouts');
 const bodyParser      = require('body-parser');
 const mongoose        = require('mongoose');
+mongoose.Promise      = require('bluebird');
 const methodOverride  = require('method-override');
 const env             = require('./config/env');
 const router          = require('./config/routes');
@@ -9,7 +10,7 @@ const app             = express();
 const session         = require('express-session');
 const flash           = require('express-flash');
 mongoose.connect(env.db);
-const User            = require('./models/users');
+const User            = require('./models/user');
 app.set('view engine', 'ejs');
 app.set('views', `${__dirname}/views`);
 

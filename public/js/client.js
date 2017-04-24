@@ -1,1 +1,1 @@
-"use strict";console.log("hello world");
+"use strict";function init(){initMap()}function initMap(){var n={lat:51.515113,lng:-.072051};new google.maps.Map(document.getElementById("map"),{zoom:15,center:n})}$(init);

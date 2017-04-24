@@ -1,105 +1,75 @@
 const Artist = require('../models/artist');
 
-function artistsIndex(req, res) {
+function artistsIndex(req, res, next) {
   Artist
   .find()
-  .exec()
-  .then(artists => {
-    return res.render('artists/index', { artists });
-  })
-  .catch(err => {
-    return res.render('error', { error: err });
-  });
-}
-
-function artistsShow(req, res) {
-  Artist
-  .findById(req.params.id)
-  .exec()
-  .then(artist => {
-    if (!artist) {
-      return res.render('error', {
-        error: 'No Artist By That Name Found.'});
-    }
-    return res.render('artists/show', { artist });
-  })
-  .catch(err => {
-    return res.render('error', { error: err });
-  });
+  .then((artists) => res.render('artists/index', { artists }))
+  .catch(next);
 }
 
 function artistsNew(req, res) {
-  return res.render('artists/new');
+  res.render('artists/new', { artists });
 }
-
-function artistsCreate(req, res) {
+// why is there 'next' but not in the above
+function artistsCreate(req, res, next) {
   Artist
   .create(req.body)
-  .then(artist => {
-    if (!artist) return res.render('error', { error: 'No artist was created!' });
-    return res.redirect('/artists');
-  })
-  .catch(err => {
-    return res.render('error', { error: err });
-  });
+  .then(() => res.redirect('/artists'))
+  .catch(next);
 }
 
-function artistsEdit(req, res) {
+function artistsShow(req, res, next) {
   Artist
   .findById(req.params.id)
-  .exec()
-  .then(artist => {
-    if (!artist) {
-      return res.render('error', { error: 'No artist found.' });
-    }
-    return res.render('artists/edit', { artist });
+  .then((artist) => {
+    if(!artist) return res.status(404).render('static/404');
+    res.render('artists/show', { artist });
   })
-  .catch(err => {
-    return res.render('error', { error: err });
-  });
+  .catch(next);
 }
 
-function artistsUpdate(req, res) {
+function artistsEdit(req, res, next) {
   Artist
   .findById(req.params.id)
-  .exec()
-  .then(artist => {
-    if (!artist) {
-      return res.render('error', { error: 'No artist found.' });
-    }
+  .then((artist) => {
+    if(!artist) return res.status(404).render('static/404');
+    res.render('artists/edit', { artist });
+  })
+  .catch(next);
+}
+// Need explanation on the below
+function artistsUpdate(req, res, next) {
+  Artist
+  .findById(req.params.id)
+  .then((artist) => {
+    if(!artist) return res.status(404).render('static/404');
+
     for (const field in req.body) {
       artist[field] = req.body[field];
     }
+
     return artist.save();
   })
-  .then(artist => {
-    if (!artist) {
-      return res.render('error', { error: 'Something went wrong during the update.' });
-    }
-    return res.render('artists/show', { artist });
-  })
-  .catch(err => {
-    return res.render('error', { error: err });
-  });
+  .then((artist) => res.render(`/artists/${artist.id}`))
+  .catch(next);
 }
 
-function artistsDelete(req, res) {
+function artistsDelete(req,res, next) {
   Artist
-  .findByIdAndRemove(req.params.id)
-  .exec()
-  .then(() => {
-    return res.redirect('/artists');
+  .findById(req.params.id)
+  .then((artist) => {
+    if(!artist) return res.status(404).render('static/404');
+    return artist.remove();
   })
-  .catch(err => {
-    return res.render('error', { error: err });
-  });
+  .then(() => res.redirect('/artists'))
+  .catch(next);
 }
 
 module.exports = {
   index: artistsIndex,
-  show: artistsShow,
   new: artistsNew,
   create: artistsCreate,
+  show: artistsShow,
   edit: artistsEdit,
   update: artistsUpdate,
   delete: artistsDelete

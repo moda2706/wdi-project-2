@@ -1,9 +1,9 @@
-const express = require('express');
-const router  = express.Router();
-const artists = require('../controllers/artists');
-router.get('/', (req, res) => res.render('statics/home'));
-const registrations = require('../controllers/registrations');
-const sessions = require('../controllers/sessions');
+const express        = require('express');
+const router         = express.Router();
+const artists        = require('../controllers/artists');
+const registrations  = require('../controllers/registrations');
+const sessions       = require('../controllers/sessions');
+const statics        = require('../controllers/statics');
 
 function secureRoute(req, res, next) {
   if (!req.session.userId) {
@@ -16,6 +16,8 @@ function secureRoute(req, res, next) {
   return next();
 }
 
+router.route('/')
+.get(statics.index);
 
 router.route('/artists')
   .get(artists.index)

@@ -1,15 +1,10 @@
-<h2> <%= video.title %> </h2>
-<div class="videowrapper">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= video.youtubeId %>" frameborder="0" allowfullscreen></iframe>
-</div>
-<div class="description">
-  <p> <%= video.description %> </p>
-</div>
-<div class="genre">
-  <p>Genre: <%= video.genre %> </p>
-</div>
-<a class="btn btn-primary edit" href="/video/<%= video.id %>/edit">Edit</a>
-<form action="/video/<%= video.id %>" method="post">
+<h2> <%= artist.title %> </h2>
+<p> <%= artist.artist %> </p>
+<p> <%= artist.description %> </p>
+<img src ="<%= artist.image %>" alt="<%= artist.artist %>'s image'">
+
+<a class="btn btn-primary edit" href="/artist/<%= artist._id %>/edit">Edit</a>
+<form action="/artists/<%= artist.id %>" method="post">
   <input type="hidden" name="_method" value="delete">
   <button class="btn btn-danger delete">Delete</button>
 </form>
