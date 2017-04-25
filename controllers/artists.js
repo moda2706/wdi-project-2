@@ -1,5 +1,4 @@
 const Artist = require('../models/artist');
-// const Comment = require('../models/comment');
 
 function artistsIndex(req, res, next) {
   Artist
@@ -14,7 +13,7 @@ function artistsIndex(req, res, next) {
 function artistsShow(req, res, next) {
   Artist
     .findById(req.params.id)
-    // .populate('comments.user')
+    .populate('comments.user')
     .exec()
     .then(artist => {
       if (!artist) {

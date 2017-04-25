@@ -1,10 +1,11 @@
 const express = require('express');
 const router  = express.Router();
 
-const artists  = require('../controllers/artists');
+const artists       = require('../controllers/artists');
 const registrations = require('../controllers/registrations');
-const sessions = require('../controllers/sessions');
-const statics = require('../controllers/statics');
+const sessions      = require('../controllers/sessions');
+const statics       = require('../controllers/statics');
+const comments      = require('../controllers/comments');
 
 function secureRoute(req, res, next) {
   if (!req.session.userId) {
@@ -33,6 +34,10 @@ router.route('/artists/:id')
 .delete(secureRoute, artists.delete);
 router.route('/artists/:id/edit')
 .get(secureRoute, artists.edit);
+
+router.route('/artists/:id')
+  .post(comments.create);
+
 
 router.route('/register')
 .get(registrations.new)

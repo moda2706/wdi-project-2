@@ -1,5 +1,6 @@
 
 $(init);
+var infowindow;
 
 function init () {
   initMap();
@@ -40,6 +41,9 @@ function addMarkers(map, latLng, artist) {
 
 function addInfoWindowForArtist( artist, marker, map){
   google.maps.event.addListener(marker, 'click', function() {
+    if (typeof infowindow !== 'undefined') {
+      infowindow.close();
+    }
     var contentString = `
     <div class="infowindow">
     <img class="artistImage" src="${ artist.image}">
@@ -48,7 +52,7 @@ function addInfoWindowForArtist( artist, marker, map){
     <p><a href="/artists/${artist._id}">Continue</a></p>
     </div>
     `;
-    var infowindow = new google.maps.InfoWindow({
+    infowindow = new google.maps.InfoWindow({
       content: contentString
     });
     infowindow.open(map, marker);
