@@ -3,25 +3,26 @@ const Artist = require('../models/artist');
 
 function artistsIndex(req, res, next) {
   Artist
-  .find()
-  .exec()
-  .then(artists => {
-    return res.render('artists/index', { artists });
-  })
-  .catch(next);
+    .find()
+    .exec()
+    .then(artists => {
+      return res.render('artists/index', { artists });
+    })
+    .catch(next);
 }
 
 function artistsShow(req, res, next) {
   Artist
-  .findById(req.params.id)
-  .exec()
-  .then(artist => {
-    if (!artist) {
-      return res.render('error', { error: 'No media found.' });
-    }
-    return res.render('artists/show', { artist });
-  })
-  .catch(next);
+    .findById(req.params.id)
+    // .populate('comments.user')
+    .exec()
+    .then(artist => {
+      if (!artist) {
+        return res.render('error', { error: 'No media found.' });
+      }
+      return res.render('artists/show', { artist });
+    })
+    .catch(next);
 }
 
 function artistsNew(req, res) {
@@ -30,57 +31,57 @@ function artistsNew(req, res) {
 
 function artistsCreate(req, res, next) {
   Artist
-  .create(req.body)
-  .then(artist => {
-    if (!artist) return res.render('error', { error: 'No media was created!' });
-    return res.redirect('/artists');
-  })
-  .catch(next);
+    .create(req.body)
+    .then(artist => {
+      if (!artist) return res.render('error', { error: 'No media was created!' });
+      return res.redirect('/artists');
+    })
+    .catch(next);
 }
 
 function artistsEdit(req, res, next) {
   Artist
-  .findById(req.params.id)
-  .exec()
-  .then(artist => {
-    if (!artist) {
-      return res.render('error', { error: 'No media found.' });
-    }
-    return res.render('artists/edit', { artist });
-  })
-  .catch(next);
+    .findById(req.params.id)
+    .exec()
+    .then(artist => {
+      if (!artist) {
+        return res.render('error', { error: 'No media found.' });
+      }
+      return res.render('artists/edit', { artist });
+    })
+    .catch(next);
 }
 
 function artistsUpdate(req, res, next) {
   Artist
-  .findById(req.params.id)
-  .exec()
-  .then(artist => {
-    if (!artist) {
-      return res.render('error', { error: 'No media found.' });
-    }
-    for (const field in req.body) {
-      artist[field] = req.body[field];
-    }
-    return artist.save();
-  })
-  .then(artist => {
-    if (!artist) {
-      return res.render('error', { error: 'Something went wrong during the update.' });
-    }
-    return res.render('artists/show', { artist });
-  })
-  .catch(next);
+    .findById(req.params.id)
+    .exec()
+    .then(artist => {
+      if (!artist) {
+        return res.render('error', { error: 'No media found.' });
+      }
+      for (const field in req.body) {
+        artist[field] = req.body[field];
+      }
+      return artist.save();
+    })
+    .then(artist => {
+      if (!artist) {
+        return res.render('error', { error: 'Something went wrong during the update.' });
+      }
+      return res.render('artists/show', { artist });
+    })
+    .catch(next);
 }
 
 function artistsDelete(req, res, next) {
   Artist
-  .findByIdAndRemove(req.params.id)
-  .exec()
-  .then(() => {
-    return res.redirect('/artists');
-  })
-  .catch(next);
+    .findByIdAndRemove(req.params.id)
+    .exec()
+    .then(() => {
+      return res.redirect('/artists');
+    })
+    .catch(next);
 }
 
 function artistsAPI(req, res) {

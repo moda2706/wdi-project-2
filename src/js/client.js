@@ -45,6 +45,7 @@ function addInfoWindowForArtist( artist, marker, map){
     <img class="artistImage" src="${ artist.image}">
     <h3>${artist.title }</h3>
     <p>${artist.description }</p>
+    <p><a href="/artists/${artist._id}">Continue</a></p>
     </div>
     `;
     var infowindow = new google.maps.InfoWindow({
