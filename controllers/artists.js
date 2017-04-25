@@ -1,29 +1,39 @@
 const Artist = require('../models/artist');
+// const Comment = require('../models/comment');
 
 function artistsIndex(req, res, next) {
   Artist
   .find()
-  .then((artists) => res.render('artists/index', { artists }))
-  .catch(next);
-}
-
-function artistsNew(req, res) {
-  res.render('artists/new', { artists });
-}
-// why is there 'next' but not in the above
-function artistsCreate(req, res, next) {
-  Artist
-  .create(req.body)
-  .then(() => res.redirect('/artists'))
+  .exec()
+  .then(artists => {
+    return res.render('artists/index', { artists });
+  })
   .catch(next);
 }
 
 function artistsShow(req, res, next) {
   Artist
   .findById(req.params.id)
-  .then((artist) => {
-    if(!artist) return res.status(404).render('static/404');
-    res.render('artists/show', { artist });
+  .exec()
+  .then(artist => {
+    if (!artist) {
+      return res.render('error', { error: 'No media found.' });
+    }
+    return res.render('artists/show', { artist });
+  })
+  .catch(next);
+}
+
+function artistsNew(req, res) {
+  return res.render('artists/new');
+}
+
+function artistsCreate(req, res, next) {
+  Artist
+  .create(req.body)
+  .then(artist => {
+    if (!artist) return res.render('error', { error: 'No media was created!' });
+    return res.redirect('/artists');
   })
   .catch(next);
 }
@@ -31,37 +41,45 @@ function artistsShow(req, res, next) {
 function artistsEdit(req, res, next) {
   Artist
   .findById(req.params.id)
-  .then((artist) => {
-    if(!artist) return res.status(404).render('static/404');
-    res.render('artists/edit', { artist });
+  .exec()
+  .then(artist => {
+    if (!artist) {
+      return res.render('error', { error: 'No media found.' });
+    }
+    return res.render('artists/edit', { artist });
   })
   .catch(next);
 }
-// Need explanation on the below
+
 function artistsUpdate(req, res, next) {
   Artist
   .findById(req.params.id)
-  .then((artist) => {
-    if(!artist) return res.status(404).render('static/404');
-
+  .exec()
+  .then(artist => {
+    if (!artist) {
+      return res.render('error', { error: 'No media found.' });
+    }
     for (const field in req.body) {
       artist[field] = req.body[field];
     }
-
     return artist.save();
   })
-  .then((artist) => res.render(`/artists/${artist.id}`))
+  .then(artist => {
+    if (!artist) {
+      return res.render('error', { error: 'Something went wrong during the update.' });
+    }
+    return res.render('artists/show', { artist });
+  })
   .catch(next);
 }
 
-function artistsDelete(req,res, next) {
+function artistsDelete(req, res, next) {
   Artist
-  .findById(req.params.id)
-  .then((artist) => {
-    if(!artist) return res.status(404).render('static/404');
-    return artist.remove();
+  .findByIdAndRemove(req.params.id)
+  .exec()
+  .then(() => {
+    return res.redirect('/artists');
   })
-  .then(() => res.redirect('/artists'))
   .catch(next);
 }
 
@@ -74,9 +92,9 @@ function artistsAPI(req, res) {
 
 module.exports = {
   index: artistsIndex,
+  show: artistsShow,
   new: artistsNew,
   create: artistsCreate,
-  show: artistsShow,
   edit: artistsEdit,
   update: artistsUpdate,
   delete: artistsDelete,

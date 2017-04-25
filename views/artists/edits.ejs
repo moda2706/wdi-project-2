@@ -1,25 +1,22 @@
 <h1>Update Image</h1>
 
-
 <form method="post" action="/artists/<%= artist._id %>">
   <input type="hidden" name="_method" value="put">
-  <label for="artist">Artist</label>
-  <input type="text" id="artist" name="artist" value="<%= artist.artist %>">
 
   <label for="title">Title</label>
-  <input type="text" id="title" name="title" value= "<%= artist.title %>">
+  <input type="text" id="title" name="title" value="<%= artist.title %>">
 
   <label for="description">Description</label>
   <textarea id="description" name="description"><%= artist.description %></textarea>
 
-  <label for="image">Image</label>
+  <label for="image">Image Link</label>
   <input type="text" id="image" name="image" value="<%= artist.image %>">
 
   <label for="latitude">Latitude</label>
   <input type="text" id="latitude" name="latitude" value="<%= artist.lat %>">
 
   <label for="longitude">Longitude</label>
-  <input type="text" id="longitude" name="longitude" value="<%= artist.lng %>"
+  <input type="text" id="longitude" name="longitude" value="<%= artist.lng %>">
 
   <input type="submit" value="Submit">
 </form>
