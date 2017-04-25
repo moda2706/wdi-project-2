@@ -13,7 +13,8 @@ function getAPIData(map) {
     data.artists.forEach(artist => {
       console.log(artist);
       const latLng = new google.maps.LatLng(artist.lat, artist.lng);
-      addMarkers(map, latLng);
+      addMarkers(map, latLng, artist);
+      console.log(latLng);
     });
   });
 }
@@ -28,10 +29,29 @@ function initMap() {
   getAPIData(map);
 }
 
-function addMarkers(map, latLng) {
+function addMarkers(map, latLng, artist) {
   const marker = new google.maps.Marker({
     position: latLng,
-    map: map
+    map: map,
+    animation: google.maps.Animation.DROP
+  });
+  addInfoWindowForArtist( artist, marker, map);
+}
+
+function addInfoWindowForArtist( artist, marker, map){
+  google.maps.event.addListener(marker, 'click', function() {
+    var contentString = `
+    <div class="infowindow">
+    <img class="artistImage" src="${ artist.image}">
+    <h3>${artist.title }</h3>
+    <p>${artist.description }</p>
+    </div>
+    `;
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+    infowindow.open(map, marker);
+    map.setCenter(marker.getPosition());
   });
 }
 
