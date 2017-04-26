@@ -76,15 +76,15 @@ User
       title: 'Pulp Fiction',
       description: 'John Travolta has never been so impotent',
       image: 'http://www.artofthestate.co.uk/photos/banksy_travolta.jpg',
-      lat: '',
-      lng: ''
+      lat: '51.5257324',
+      lng: '-0.0880074'
     },{
       artist: 'Banksy',
       title: 'Have A Nice Day',
       description: 'This image shows the sheer scale (and audacity) of this piece',
       image: 'http://www.artofthestate.co.uk/photos/banksy_old_st_cops2.jpg',
-      lat: '51.5257324',
-      lng: '-0.0880074'
+      lat: '51.5256244',
+      lng: '-0.0897066'
     },{
       artist: 'Banksy',
       title: 'Banksy Graffiti',
@@ -101,67 +101,46 @@ User
       lng: '-90.0628647'
     },{
       artist: 'Banksy',
-      title: 'Banksy Crayon Boy',
+      title: 'Crayon Boy',
       description: 'Banksy Crayon Boy on the back of a store in LA in the run up to the Oscars 2011',
       image: 'http://www.artofthestate.co.uk/photos/banksy_karin_crayon_boy_3.jpg',
-      lat: '',
-      lng: ''
+      lat: '34.0645222',
+      lng: '-118.4628406,13'
     },{
       artist: 'Banksy',
-      title: 'Kissing Coppers in Brighton ',
+      title: 'Kissing Coppers',
       description: 'Banksy\'s kissing coppers turned up in Brighton but were pretty swiftly damaged and repainted (its unclear by whom). They were then protected by perspex as seen in this photo',
       image: 'http://www.artofthestate.co.uk/photos/banksy_brighton_kissing_coppers.jpg',
-      lat: '',
-      lng: ''
+      lat: '50.8284764',
+      lng: '-0.1428541'
     },{
       artist: 'Banksy',
       title: 'Heart Boy',
       description: 'This piece originally appeared in Islington, London, but it has a new home now in Amsterdam\'s Moco Museum.',
       image: 'http://cdn2.straatosphere.com/wp-content/uploads/2016/06/376895.jpg',
-      lat: '',
-      lng: ''
-    },{
-      artist: 'D*face',
-      title: 'Old Street phone box.',
-      description: 'This stencil on the base of a phone box. It must have had the cleanest lines I have ever seen on a stencil so maybe was screenprinted directly onto the box in what was a very unassuming position',
-      image: 'http://www.artofthestate.co.uk/photos/pglondonGRAFFITIdface.jpg',
-      lat: '',
-      lng: ''
+      lat: '51.5226504',
+      lng: '-0.1000412'
     },{
       artist: 'Banksy',
       title: 'Hammer Boy',
       description: 'One of the street artist\'s surviving pieces from his New York residency back in 2013.',
       image: 'https://untappedcities-wpengine.netdna-ssl.com/wp-content/uploads/2013/10/Banksy-Hammer-Boy-Upper-West-Side.jpg',
-      lat: '',
-      lng: ''
+      lat: '40.773813',
+      lng: '-73.9583693'
     },{
       artist: 'D*face',
-      title: 'Customised skateboard 5',
-      description: '',
-      image: 'http://www.artofthestate.co.uk/photos/dface_board5.jpg',
-      lat: '',
-      lng: ''
-    },{
-      artist: 'D*face',
-      title: 'Feltham Circles wall piece 2004',
-      description: '',
+      title: 'Circles Wall Piece 2004',
+      description: 'July 2004 hit at Feltham Circles featuring Hersey, Fybe, Catman, Monsta, D-Face and Gorb ',
       image: 'http://www.artofthestate.co.uk/photos/dface_flyer.jpg',
-      lat: '',
-      lng: ''
-    },{
-      artist: 'D*face',
-      title: ' Customised skateboard 1',
-      description: '',
-      image: 'http://www.artofthestate.co.uk/photos/dface_board1.jpg',
-      lat: '',
-      lng: ''
+      lat: '51.4453053',
+      lng: '-0.4474111'
     },{
       artist: 'D*face',
       title: 'The London police \'Lads\' and D-Face poster',
       description: 'High up on a wall in Old Street. The London Police (now based in Amsterdam) must have had some fun pasting this up. And yeah, if you are wondering, it was a joint hit with D-face - see the balloon dog figure on the right.',
       image: 'http://www.artofthestate.co.uk/photos/pglondonGRAFFITIlpolice3.jpg',
-      lat: '',
-      lng: ''
+      lat: '52.3644419',
+      lng: '4.9051932'
     },{
       artist: 'D*face',
       title: 'D-face poster',
@@ -382,30 +361,43 @@ User
     },{
       artist: 'Stik',
       title: 'Curtain Road',
-      description: '',
+      description: 'Stik is a London Street artist who been creating Stik people around East London for over ten years, adorning shop shutters and walls. Stik people, are androgynous and constructed from simple shapes. Stik, the street artist was homeless for a period',
       image: 'https://assets.londonist.com/uploads/2010/09/i875/18795_stikcurtain.jpg',
       lat: '',
       lng: ''
     },{
       artist: 'Stik',
       title: 'Princelet Street',
-      description: '',
+      description: 'Stik is a London Street artist who been creating Stik people around East London for over ten years, adorning shop shutters and walls. Stik people, are androgynous and constructed from simple shapes. Stik, the street artist was homeless for a period',
       image: 'https://assets.londonist.com/uploads/2010/09/i875/18795_stikprincelet.jpg',
       lat: '',
       lng: ''
     },{
       artist: 'Stik',
       title: 'Torville Street',
-      description: '',
+      description: 'Stik is a London Street artist who been creating Stik people around East London for over ten years, adorning shop shutters and walls. Stik people, are androgynous and constructed from simple shapes. Stik, the street artist was homeless for a period',
       image: 'https://assets.londonist.com/uploads/2010/09/i875/18795_stikredchurch.jpg',
       lat: '',
       lng: ''
-
     },{
       artist: 'Stik',
-      title: 'Angry Stik on Grimsby Street',
-      description: '',
+      title: 'Angry Stik',
+      description: 'Stik is a London Street artist who been creating Stik people around East London for over ten years, adorning shop shutters and walls. Stik people, are androgynous and constructed from simple shapes. Stik, the street artist was homeless for a period',
       image: 'https://assets.londonist.com/uploads/2010/09/i875/18795_stikgrimsby.jpg',
+      lat: '51.5232069',
+      lng: '-0.0727232'
+    },{
+      artist: 'Stik',
+      title: '',
+      description: '',
+      image: '',
+      lat: '',
+      lng: ''
+    },{
+      artist: 'Stik',
+      title: '',
+      description: '',
+      image: '',
       lat: '',
       lng: ''
     }]);
