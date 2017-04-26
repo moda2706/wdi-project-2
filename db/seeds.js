@@ -48,8 +48,8 @@ User
       title: 'Spy Booth',
       description: 'Painted down the road from GCHQ, this now severely defaced piece was seen as a critique on global surveillance.',
       image: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2015/03/12/11/spy-booth-banksy.jpg',
-      lat: '',
-      lng: ''
+      lat: '51.8991684',
+      lng: '-2.0682282'
     },{
       artist: 'Banksy',
       title: 'The Mild Mild West',
@@ -66,14 +66,14 @@ User
       lng: '-0.0661011'
     },{
       artist: 'Banksy',
-      title: 'Gorilla and mask - Eastville, Bristol',
+      title: 'Gorilla And Mask',
       description: 'After a long hiatus Banksy is back with both this piece In Bristol and a large Portaloo version of Stonehenge.',
       image: 'http://www.artofthestate.co.uk/photos/banksy_gorilla_with_mask.jpg',
-      lat: '',
-      lng: ''
+      lat: '51.4753125',
+      lng: '-2.5453882'
     },{
       artist: 'Banksy',
-      title: 'Pulp Fiction, Shoreditch, London',
+      title: 'Pulp Fiction',
       description: 'John Travolta has never been so impotent',
       image: 'http://www.artofthestate.co.uk/photos/banksy_travolta.jpg',
       lat: '',
@@ -83,34 +83,41 @@ User
       title: 'Have A Nice Day',
       description: 'This image shows the sheer scale (and audacity) of this piece',
       image: 'http://www.artofthestate.co.uk/photos/banksy_old_st_cops2.jpg',
-      lat: '',
-      lng: ''
+      lat: '51.5257324',
+      lng: '-0.0880074'
     },{
       artist: 'Banksy',
-      title: 'BANKSY GRAFFITI: work in Europe',
+      title: 'Banksy Graffiti',
       description: 'Freestyle painted truck by Banksy, now residing in Spain. This truck was painted in 1998 and was seen at Glastonbury for 3 or 4 years after that as well as at the Eclipse festival in Cornwall. Various images Of Banksy\'s European adventures supplied by readers of artofthestate will be here shortly',
       image: 'http://www.artofthestate.co.uk/photos/banksy_painted_truck.jpg',
-      lat: '',
-      lng: ''
+      lat: '40.4188517',
+      lng: '-3.7056571'
     },{
       artist: 'Banksy',
-      title: 'Looters, New Orleans',
+      title: 'Looters',
       description: 'Looters depicted by Banksy in New Orleans. Reports of looting were widespread in a hysterical media but what the hell are you supposed to do when the local supermarket isn\'t open 24 hours a day anymore? ',
       image: 'http://www.artofthestate.co.uk/photos/banksy_couk_looting.jpg',
-      lat: '',
-      lng: ''
+      lat: '29.9591374',
+      lng: '-90.0628647'
     },{
       artist: 'Banksy',
-      title: 'Banksy Crayon Boy, Los Angeles',
+      title: 'Banksy Crayon Boy',
       description: 'Banksy Crayon Boy on the back of a store in LA in the run up to the Oscars 2011',
       image: 'http://www.artofthestate.co.uk/photos/banksy_karin_crayon_boy_3.jpg',
       lat: '',
       lng: ''
     },{
       artist: 'Banksy',
-      title: '',
-      description: '',
-      image: '',
+      title: 'Kissing Coppers in Brighton ',
+      description: 'Banksy\'s kissing coppers turned up in Brighton but were pretty swiftly damaged and repainted (its unclear by whom). They were then protected by perspex as seen in this photo',
+      image: 'http://www.artofthestate.co.uk/photos/banksy_brighton_kissing_coppers.jpg',
+      lat: '',
+      lng: ''
+    },{
+      artist: 'Banksy',
+      title: 'Heart Boy',
+      description: 'This piece originally appeared in Islington, London, but it has a new home now in Amsterdam\'s Moco Museum.',
+      image: 'http://cdn2.straatosphere.com/wp-content/uploads/2016/06/376895.jpg',
       lat: '',
       lng: ''
     },{
@@ -118,6 +125,13 @@ User
       title: 'Old Street phone box.',
       description: 'This stencil on the base of a phone box. It must have had the cleanest lines I have ever seen on a stencil so maybe was screenprinted directly onto the box in what was a very unassuming position',
       image: 'http://www.artofthestate.co.uk/photos/pglondonGRAFFITIdface.jpg',
+      lat: '',
+      lng: ''
+    },{
+      artist: 'Banksy',
+      title: 'Hammer Boy',
+      description: 'One of the street artist\'s surviving pieces from his New York residency back in 2013.',
+      image: 'https://untappedcities-wpengine.netdna-ssl.com/wp-content/uploads/2013/10/Banksy-Hammer-Boy-Upper-West-Side.jpg',
       lat: '',
       lng: ''
     },{
@@ -366,45 +380,32 @@ User
       lat: '',
       lng: ''
     },{
-      artist: '',
-      title: '',
+      artist: 'Stik',
+      title: 'Curtain Road',
       description: '',
-      image: '',
+      image: 'https://assets.londonist.com/uploads/2010/09/i875/18795_stikcurtain.jpg',
       lat: '',
       lng: ''
     },{
-      artist: '',
-      title: '',
+      artist: 'Stik',
+      title: 'Princelet Street',
       description: '',
-      image: '',
+      image: 'https://assets.londonist.com/uploads/2010/09/i875/18795_stikprincelet.jpg',
       lat: '',
       lng: ''
     },{
-      artist: '',
-      title: '',
+      artist: 'Stik',
+      title: 'Torville Street',
       description: '',
-      image: '',
+      image: 'https://assets.londonist.com/uploads/2010/09/i875/18795_stikredchurch.jpg',
       lat: '',
       lng: ''
+
     },{
-      artist: '',
-      title: '',
+      artist: 'Stik',
+      title: 'Angry Stik on Grimsby Street',
       description: '',
-      image: '',
-      lat: '',
-      lng: ''
-    },{
-      artist: '',
-      title: '',
-      description: '',
-      image: '',
-      lat: '',
-      lng: ''
-    },{
-      artist: '',
-      title: '',
-      description: '',
-      image: '',
+      image: 'https://assets.londonist.com/uploads/2010/09/i875/18795_stikgrimsby.jpg',
       lat: '',
       lng: ''
     }]);
