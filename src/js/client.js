@@ -40,6 +40,7 @@ function addMarkers(map, latLng, artist) {
 }
 
 function addInfoWindowForArtist( artist, marker, map){
+  console.log(artist);
   google.maps.event.addListener(marker, 'click', function() {
     if (typeof infowindow !== 'undefined') {
       infowindow.close();
