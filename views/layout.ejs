@@ -2,43 +2,30 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <title>WDI Project 2</title>
-
-  <% include ./partials/stylesheet %>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_8uJnYZL9N1FIr2_cUs2Rp9g1UrQGUl0"
-   type="text/javascript"></script>
+  <link rel="stylesheet" href="/css/main.css">
   <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHLVnNmjiWCU6dGd10eea4_rLsjLfghME&callback=initMap"
+  type="text/javascript"></script>
   <script src="/js/client.js" charset="utf-8"></script>
-  <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
+  <header>
+    <% include ./partials/_navbar %>
+  </header>
 
-  <ul class="navbar-nav mr-auto">
-    <li class="nav-item">
-      <a class="nav-link" href="/artists">Artists</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/artists/new">Add Artist</a>
-    </li>
-    <% if (locals.isLoggedIn) { %>
-      <li class="nav-item">
-        <a class="nav-link" href="/Logout">Logout</a>
-      </li>
-    <% } else { %>
-      <li class="nav-item">
-        <a class="nav-link" href="/Login">Log In</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/Register">Register</a>
-      </li>
-    <% } %>
-  </ul>
+
+
   <main>
-    <%- body %>
+    <% for (const type in messages) { %>
+      <p class="alert alert-<%= type %>"><%= messages[type] %></p>
+      <% } %>
+      <%- body %>
   </main>
   <footer>
     <p>Made with &hearts; by MO</p>
