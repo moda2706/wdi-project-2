@@ -360,46 +360,46 @@ User
       lng: ''
     },{
       artist: 'Stik',
-      title: 'Curtain Road',
-      description: 'Stik is a London Street artist who been creating Stik people around East London for over ten years, adorning shop shutters and walls. Stik people, are androgynous and constructed from simple shapes. Stik, the street artist was homeless for a period',
-      image: 'https://assets.londonist.com/uploads/2010/09/i875/18795_stikcurtain.jpg',
-      lat: '',
-      lng: ''
+      title: 'Deconstruction',
+      description: 'From the disappearance of public artworks to cuts in the public sector, our culture is being deconstructed brick by brick. It is up to us to defend culture from those who only understand money',
+      image: 'https://static1.squarespace.com/static/571516f62fe131760ca564bf/t/587f3d19e58c621b48505719/1484733753257/stik-deconstruction-mural-hackney?format=2500w',
+      lat: '51.5310992',
+      lng: '-0.0699873'
     },{
       artist: 'Stik',
-      title: 'Princelet Street',
-      description: 'Stik is a London Street artist who been creating Stik people around East London for over ten years, adorning shop shutters and walls. Stik people, are androgynous and constructed from simple shapes. Stik, the street artist was homeless for a period',
-      image: 'https://assets.londonist.com/uploads/2010/09/i875/18795_stikprincelet.jpg',
-      lat: '',
-      lng: ''
+      title: 'Big Mother',
+      description: 'A mother and child look forlornly from their condemned council building across the expanse of private luxury apartments being built around them',
+      image: 'https://static1.squarespace.com/static/571516f62fe131760ca564bf/t/587f3dc337c581c9c4338ad9/1484733992097/?format=2500w',
+      lat: '51.5019813',
+      lng: '-0.2746497'
     },{
       artist: 'Stik',
-      title: 'Torville Street',
-      description: 'Stik is a London Street artist who been creating Stik people around East London for over ten years, adorning shop shutters and walls. Stik people, are androgynous and constructed from simple shapes. Stik, the street artist was homeless for a period',
-      image: 'https://assets.londonist.com/uploads/2010/09/i875/18795_stikredchurch.jpg',
-      lat: '',
-      lng: ''
+      title: 'Union',
+      description: 'n 1882 Union Square was the site of the first Labour Day. The eight figures surrounding the water tower represent the victory of the eight hour working day the rally achieved and the other countries that celebrate International Workers day.',
+      image: 'https://static1.squarespace.com/static/571516f62fe131760ca564bf/t/587f3e543a041195650a5897/1484734060708/Stik-Union-Square-Mural.jpg?format=2500w',
+      lat: '40.7335363',
+      lng: '-73.9920603'
     },{
       artist: 'Stik',
-      title: 'Angry Stik',
-      description: 'Stik is a London Street artist who been creating Stik people around East London for over ten years, adorning shop shutters and walls. Stik people, are androgynous and constructed from simple shapes. Stik, the street artist was homeless for a period',
-      image: 'https://assets.londonist.com/uploads/2010/09/i875/18795_stikgrimsby.jpg',
-      lat: '51.5232069',
-      lng: '-0.0727232'
+      title: 'Liberty',
+      description: 'Liberty is a power salute in recognition of the radical history of Tomkins Square. The park has been a platform for activists since the 1874 workers riots and the more recent 1988 housing riots',
+      image: 'https://static1.squarespace.com/static/571516f62fe131760ca564bf/t/587f3f261b10e3086959b559/1484734405135/Stik-Liberty-Mural-New-York?format=2500w',
+      lat: '40.7265257',
+      lng: '-73.9839259'
     },{
       artist: 'Stik',
-      title: '',
-      description: '',
-      image: '',
-      lat: '',
-      lng: ''
+      title: 'Oil Recycling Plant',
+      description: 'The four tanks clean impurities out of reclaimed oil so it can be re-used. The giant figures walk round and round endlessly echoing the recycling process',
+      image: 'https://static1.squarespace.com/static/571516f62fe131760ca564bf/t/587f403ed1758ebcc385486b/1484734534993/?format=2500w',
+      lat: '35.0822985',
+      lng: '138.3754351'
     },{
       artist: 'Stik',
-      title: '',
-      description: '',
-      image: '',
-      lat: '',
-      lng: ''
+      title: 'Utsira',
+      description: 'These two giant figures represent the 200 inhabitants of the island of Utsira who have all the electricity they need from these two wind turbine',
+      image: 'https://static1.squarespace.com/static/571516f62fe131760ca564bf/t/587f3ea0bebafb27b6e7b870/1484734133860/stik-utsira-mural-norway?format=2500w',
+      lat: '59.308129',
+      lng: '4.8798742'
     }]);
 
 })
