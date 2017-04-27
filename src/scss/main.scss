@@ -8,6 +8,16 @@ body {
   background-repeat: no-repeat;
   font-family: sans-serif;
 }
+.newArtistBg {
+  background-image: url("http://graffitistreet.d2h5auugd94dirh.maxcdn-edge.com/wp-content/uploads/2016/10/Hunto-Golia-on-wood-500x500.jpg");
+  background-color: grey;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: sans-serif;
+  min-height: 900px;
+}
+
 
 
 .navbar {
@@ -24,6 +34,7 @@ body {
 }
 label {
   display: block;
+  font-family: 'Rationale', sans-serif;
 }
 // form {
 //   width: 550px;
@@ -139,6 +150,7 @@ p {
 .btn-primary {
   background-color: #fff333;
   border: 1px solid black;
+  color: black;
   transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   -webkit-transition: all .3s ease-in-out;
@@ -233,4 +245,19 @@ h1 {
   background: #fff333;
   border: 2px solid black;
   color: black;
+}
+
+.login {
+  color: white;
+  background: 0 0;
+  width: 100%;
+  vertical-align: middle;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+  h1{font-size: 40px}
+  // line-height: 100vh;
+  // font-size: 5vw;
 }

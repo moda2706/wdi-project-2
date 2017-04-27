@@ -26,7 +26,7 @@ User
       artist: 'Banksy',
       title: 'Naked Man Hanging from Window',
       description: 'Banksy Well Hung Lover as it is also known, is another enduring icon of the British city of Bristol. ... Having made headlines around the world when it first appeared, “Well Hung Lover” is a wry dedication to the insolent attitude of Bristol.',
-      image: 'https://cdn-s3.touchofmodern.com/products/000/004/353/8a7e59f8957c1484ebc5f0a5801bb2e6_large.jpg?1392329799',
+      image: 'http://www.stencilrevolution.com/photopost/2013/04/Banksy-Naked-Man-Hanging-from-Window-by-Banksy.jpg',
       lat: '51.4492436',
       lng: '-2.6088978'
     },{

@@ -34,7 +34,7 @@ function initMap() {
                 "saturation": 36
             },
             {
-                "color": "#000000"
+                "color": "white"
             },
             {
                 "lightness": 40

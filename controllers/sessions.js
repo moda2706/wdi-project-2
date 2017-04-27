@@ -1,7 +1,9 @@
 const User = require('../models/user');
 
 function sessionsNew(req, res) {
-  res.render('sessions/new');
+  res.render('sessions/new', {
+    layout: 'newArtistLayout'
+  });
 }
 
 function sessionsCreate(req, res) {
