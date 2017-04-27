@@ -22,7 +22,9 @@ router.route('/')
 .get(statics.index);
 
 router.route('/artists')
-.get(artists.index)
+.get(artists.index);
+router.route('/map')
+.get(artists.map)
 .post(secureRoute, artists.create);
 router.route('/artists/api')
 .get(artists.api);

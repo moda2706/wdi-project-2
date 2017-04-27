@@ -10,6 +10,10 @@ function artistsIndex(req, res, next) {
     .catch(next);
 }
 
+function artistsMap(req, res, next) {
+  return res.render('artists/map');
+}
+
 function artistsShow(req, res, next) {
   Artist
     .findById(req.params.id)
@@ -98,5 +102,6 @@ module.exports = {
   edit: artistsEdit,
   update: artistsUpdate,
   delete: artistsDelete,
-  api: artistsAPI
+  api: artistsAPI,
+  map: artistsMap
 };
