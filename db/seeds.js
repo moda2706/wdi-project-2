@@ -136,7 +136,7 @@ User
       lng: '-0.4474111'
     },{
       artist: 'D*face',
-      title: 'The London police \'Lads\' and D-Face poster',
+      title: 'The London police \'Lads\'',
       description: 'High up on a wall in Old Street. The London Police (now based in Amsterdam) must have had some fun pasting this up. And yeah, if you are wondering, it was a joint hit with D-face - see the balloon dog figure on the right.',
       image: 'http://www.artofthestate.co.uk/photos/pglondonGRAFFITIlpolice3.jpg',
       lat: '52.3644419',

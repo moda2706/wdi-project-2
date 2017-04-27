@@ -1,37 +1,29 @@
 <h1>Add Image</h1>
 
 <form method="post" action="/artists">
-
-<div class="">
-  <label for="artist">Artist</label>
-  <input type="text" id="artist" name="artist">
-</div>
-<div class="">
-
-<div class="">
-  <label for="title">Title</label>
-  <input type="text" id="title" name="title">
-</div>
-
-<div class="">
-  <label for="description">Description</label>
-  <textarea id="description" name="description"></textarea>
-</div>
-
-<div class="">
-  <label for="image">Image</label>
-  <input type="text" id="image" name="image">
-</div>
-
-<div class="">
-  <label for="latitude">Latitude</label>
-  <input type="text" id="latitude" name="lat">
-</div>
-
-<div class="">
-  <label for="longitude">Longitude</label>
-  <input type="text" id="longitude" name="lng">
-</div>
-
-<button type="submit" class="btn btn-default">Submit</button>
+  <div class="form-group">
+    <label for="artist">Artist</label>
+    <input type="text" id="artist" name="artist" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea id="description" name="description" class="form-control"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="image">Image</label>
+    <input type="text" id="image" name="image" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="latitude">Latitude</label>
+    <input type="text" id="latitude" name="lat" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="longitude">Longitude</label>
+    <input type="text" id="longitude" name="lng" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
