@@ -1,3 +1,5 @@
 <div class="border-header">
-<h1>Graffiti Can</h1>
+<% const graffiti = ['Can', 'Bus', 'Wall', 'Park', 'Spray', 'Street', 'Love', 'Hate', 'Art'] %>
+<%  r = (Math.floor(Math.random()*graffiti.length)) %>
+<h1>Graffiti <%= graffiti[r] %> </h1>
 </div>
