@@ -3,8 +3,12 @@
     <div class="carousel-inner">
       <% artists.forEach((artist, i) => { %>
         <div class="item <% if (i === 0) { %>active<% } %>">
+        <p class="center"><%= artist.artist %></p>
+        
         <img class="center" src="<%= artist.image %>" alt="<%= artist.title %>'s image">
+
         </div>
+
         <% }); %>
       </div>
 

@@ -209,7 +209,7 @@ function addMarkers(map, latLng, artist) {
     map: map,
     animation: google.maps.Animation.DROP,
     icon: {
-      url: 'https://cdn0.iconfinder.com/data/icons/hardware-and-painting-tools/512/spray_can-128.png',
+      url: 'http://www.iconsdb.com/icons/preview/yellow/spray-can-xxl.png',
       scaledSize: new google.maps.Size(40, 40)
     }
   });
